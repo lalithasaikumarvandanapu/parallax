@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PARALLAX SCROLLING WEBSITE | VANILLA JAVASCRIPT</title>
+         <link rel="stylesheet" type="text/css" href="style2.css">   
+    </head>
+        <body>
+            <header id="header">
+                <a href="#" class="logo">Jungle</a>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Destination</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </header>
+                <section>
+                    <h2 id="text"><span>It's time for a new</span><br>Adventure</h2>
+                    <img src="bird12.png" id="bird12">
+                    <img src="bird22.png" id="bird22">
+                    <img src="forest.png" id="forest">
+                    
+
+                    <a href="#" id="btn">Explore</a>
+                    <img src="rocks.png" id="rocks">
+                    <img src="water.png" id="water">
+                    
+
+                    </section>
+                    <div class="sec">
+                        <h2>Parallax Scrolling Effects</h2>
+                        <p>to je Lorem Ipsum? Lorem Ipsum je jednostavno probni tekst koji se koristi u tiskarskoj i slovoslagarskojM<br> industriji. Lorem Ipsum postoji kao industrijski standard još od 16-og stoljeća, kada je nepoznati <br>tiskar uzeo tiskarsku galiju slova i posložio ih da bi napravio knjigu s uzorkom tiska.<br> Taj je tekst ne samo preživio pet stoljeća, već se i vinuo u svijet elektronskog slovoslagarstva, ostajući u suštini nepromijenjen. Postao je popularan tijekom 1960-ih s pojavom Letraset listova s odlomcima Lorem Ipsum-a, a u skorije vrijeme sa software-om za stolno izdavaštvo kao što je Aldus PageMaker koji također <br>sadrži varijante Lorem Ipsum-a.
+                            Suprotno raširenom mišljenju, Lorem Ipsum <br>nije samo slučajni tekst, već ima korijene u klasičnoj latinskoj književnosti iz godine 45. pr.n.e., što znači <br>da mu je preko 2000 godina. Richard McClintock, profesor latinskog jezika na Hampden-Sydney <br>koledžu u Virginiji, potražio je jednu od čudnijijh latinskih riječi, consectetur, iz Lorem Ipsum teksta, i prolazeći kroz <br>citate te riječi u klasičnoj književnosti, otkrio nedvojbeni izvor. Lorem Ipsum dolazi iz odlomaka 1.10.32 i 1.10.33 Ciceronovog djela pod<br> naslovom "de Finibus Bonorum et Malorum" (Krajnosti dobra i zla), napisanog 45. godine pr.n.e. Ovo je djelo rasprava o teoriji etike, a<br> bilo je 
+                            vrlo popularno u Renesansi. Prvi redak Lorem Ipsum-a, "Lorem ipsum dolor sit amet..", dolazi iz odlomka 1.10.32.</p>
+                    </div>  
+                    
+                    <script>
+                        let text =document.getElementById('text');
+                        let bird12 = document.getElementById('bird12');
+                        let bird22 = document.getElementById('bird22');
+                        let  btn = document.getElementById('btn');
+                        let rocks = document.getElementById('rocks');
+                        let forest= document.getElementById('forest');
+                        let water = document.getElementById('water');
+                        let header = document.getElementById('header');
+
+                        window.addEventListener('scroll',function() {
+                            let value = window.scrollY;
+
+                            text.style.top = 50 + value * -0.5 +'%';
+                            bird12.style.top = value * -1.0 + 'px';
+                            bird12.style.left = value * 1.5 + 'px';
+                            bird22.style.top = value * -1.0 + 'px';
+                            bird22.style.left = value * -4.5+ 'px';
+                            btn.style.marginTop = value * 1.0 + 'px'; 
+                            rocks.style.top = value * -0.24 + 'px';
+                            forest.style.top = value * 0.20 + 'px';
+                            header.style.top = value * 0.5 + 'px';
+                        })
+                    </script>
+        </body>
+
+ </html>      
